@@ -1,0 +1,6 @@
+#summary List of constants for S60 keys.
+
+= Softkeys =
+
+|| Left softkey || K_SPACE ||
+|| Right softkey || K_ESCAPE ||
