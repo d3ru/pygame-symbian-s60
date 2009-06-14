@@ -1,0 +1,4 @@
+EXPORTS
+	init_Box2D @ 1 NONAME
+
+    
