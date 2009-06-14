@@ -1,0 +1,100 @@
+/*
+============================================================================
+ Name		: libsft2.mmp
+ Author	  : Harry Li
+ Copyright   : Copyright Harry Li 2007
+ Description : This is the project specification file for libsft2.
+============================================================================
+*/
+
+TARGET		  libsft2.dll
+TARGETTYPE	  dll
+// Symbian Signed
+//UID 0x1000008d 0x2000B89C
+//CAPABILITY  None
+// Self Signed
+UID 0x00000000 0xA000368D
+CAPABILITY	  LocalServices UserEnvironment NetworkServices ReadUserData WriteUserData 
+
+USERINCLUDE	    ..\inc
+SYSTEMINCLUDE   \epoc32\include\libc 
+SYSTEMINCLUDE   \epoc32\include
+SYSTEMINCLUDE   ..\inc\sys
+
+//By default, the build tools look for the WINSCW def file in a BWINS directory
+//(at the same level as the directory containing the mmp file), 
+//the GCC ARM def file in a BMARM directory, and the ARMV5 def file in a EABI directory. 
+//If def files are stored in these locations, the project files does not need to specify
+//the location of the def files explicitly. If you want to store the def files in some other 
+//location, you will need to specify in the project file where the .def files are using 
+//the deffile keyword.
+
+//The following commented out code shows how the build system uses the implicit
+// location for defiles. To create the DEF files Choose Project > Freeze Exports from Carbide
+// or run 'abld freeze' from the command-line
+#if defined (WINS)
+DEFFILE ..\bwins\libsft2.def
+#elif defined (GCC32)
+  DEFFILE ..\bmarm\libsft2.def
+#else 
+DEFFILE ..\eabi\libsft2.def
+#endif
+
+
+nostrictdef
+EXPORTUNFROZEN
+
+
+LIBRARY		 euser.lib estlib.lib
+LIBRARY		 gdi.lib fbscli.lib  
+
+
+MACRO FT2_BUILD_LIBRARY
+MACRO LOGN_ENABLE
+MACRO LOGP_ENABLE
+MACRO cplusplus
+
+
+SOURCEPATH	  ..\src
+SOURCE		  libsft2.cpp
+SOURCE		  libsft2DllMain.cpp
+
+
+SOURCEPATH ..\src\base
+SOURCE ftapi.c ftbase.c ftbbox.c ftbdf.c ftbitmap.c ftdebug.c ftgasp.c ftglyph.c ftgxval.c ftinit.c ftlcdfil.c ftmm.c ftotval.c ftpfr.c ftstroke.c ftsynth.c ftsystem.c fttype1.c ftwinfnt.c ftxf86.c
+SOURCEPATH ..\src\winfonts
+SOURCE winfnt.c
+SOURCEPATH ..\src\bdf
+SOURCE bdf.c
+SOURCEPATH ..\src\type42
+SOURCE type42.c
+SOURCEPATH ..\src\type1
+SOURCE type1.c
+SOURCEPATH ..\src\truetype
+SOURCE truetype.c
+SOURCEPATH ..\src\cid
+SOURCE type1cid.c
+SOURCEPATH ..\src\pcf
+SOURCE pcf.c
+SOURCEPATH ..\src\psaux
+SOURCE psaux.c
+SOURCEPATH ..\src\pfr
+SOURCE pfr.c
+SOURCEPATH ..\src\cff
+SOURCE cff.c
+SOURCEPATH ..\src\psnames
+SOURCE psnames.c
+SOURCEPATH ..\src\pshinter
+SOURCE pshinter.c
+SOURCEPATH ..\src\autofit
+SOURCE autofit.c afwarp.c
+SOURCEPATH ..\src\gzip
+SOURCE ftgzip.c
+SOURCEPATH ..\src\smooth
+SOURCE smooth.c
+SOURCEPATH ..\src\raster
+SOURCE raster.c
+SOURCEPATH ..\src\sfnt
+SOURCE sfnt.c
+SOURCEPATH ..\src\lzw
+SOURCE ftlzw.c

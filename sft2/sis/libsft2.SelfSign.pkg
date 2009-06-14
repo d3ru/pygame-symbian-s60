@@ -1,0 +1,22 @@
+; Installation file for libsft2 dll
+;
+; This is an auto-generated PKG file by Carbide.
+; This file uses variables specific to Carbide builds that will not work
+; on command-line builds. If you want to use this generated PKG file from the
+; command-line tools you will need to modify the variables with the appropriate
+; values: $(EPOCROOT), $(PLATFORM), $(TARGET)
+
+;
+; UID is the dll's UID
+;
+#{"Symbian FreeType Library"},(0xA000368D),1,0,0
+
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+;Localised Vendor name
+%{"HARRY-LI"}
+
+;Unique Vendor name
+:"HARRY-LI"
+
+"$(EPOCROOT)Epoc32\release\$(PLATFORM)\$(TARGET)\libsft2.dll"		  -"!:\sys\bin\libsft2.dll"

@@ -1,0 +1,22 @@
+/*
+============================================================================
+ Name		: bld.inf
+ Author	  : Harry Li
+ Copyright   : Copyright Harry Li 2007
+ Description : This file provides the information required for building the
+			   whole of a libsft2.
+============================================================================
+*/
+
+PRJ_PLATFORMS
+#ifdef EKA2
+WINSCW GCCE
+#else
+WINSCW THUMB ARMI
+#endif
+
+PRJ_EXPORTS
+..\inc\symbianfreetype.h
+
+PRJ_MMPFILES
+libsft2.mmp
