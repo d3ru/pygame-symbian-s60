@@ -1,0 +1,147 @@
+  make -r  -f "\EPOC32\BUILD\SDL-1.2.13\symbian\EXPORT.make" EXPORT
+make: Nothing to be done for `EXPORT'.
+  make -r  -f "\EPOC32\BUILD\SDL-1.2.13\symbian\GCCE.make" MAKEFILE
+make   -C \SDL-1.2.13\symbian -f "SDL_S60.MK" TO_ROOT=..\.. EPOCBLD=\EPOC32\BUILD\SDL_S60\GCCE TO_BLDINF=..\..\SDL-1.2.13\symbian PLATFORM=GCCE MAKMAKE
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
+perl -S makmake.pl  -D \SDL-1.2.13\symbian\SDL GCCE   
+WARNING: \SDL-1.2.13\symbian\SDL.MMP(159) : SYSTEMINCLUDE path "\epoc32\include\middleware\" not found
+
+WARNING: \SDL-1.2.13\symbian\SDL.MMP(160) : SYSTEMINCLUDE path "\epoc32\include\osextensions\" not found
+
+WARNING: \SDL-1.2.13\symbian\SDL.MMP(160) : SYSTEMINCLUDE path "\epoc32\include\EGL\" not found
+
+perl -S makmake.pl  -D \SDL-1.2.13\symbian\SDLEXE GCCE   
+WARNING: \SDL-1.2.13\symbian\SDLEXE.MMP(30) : SYSTEMINCLUDE path "\epoc32\include\middleware\" not found
+
+WARNING: \SDL-1.2.13\symbian\SDLEXE.MMP(30) : SYSTEMINCLUDE path "\epoc32\include\osextensions\" not found
+
+WARNING: \SDL-1.2.13\symbian\SDLEXE.MMP(30) : SYSTEMINCLUDE path "\epoc32\include\domain\middleware\" not found
+
+perl -S makmake.pl  -D \SDL-1.2.13\symbian\SDLMAIN GCCE   
+perl -S makmake.pl  -D \SDL-1.2.13\symbian\SDLMAINT GCCE   
+  make -r  -f "\EPOC32\BUILD\SDL-1.2.13\symbian\GCCE.make" LIBRARY
+make   -C \SDL-1.2.13\symbian -f "SDL_S60.MK" TO_ROOT=..\.. EPOCBLD=\EPOC32\BUILD\SDL_S60\GCCE TO_BLDINF=..\..\SDL-1.2.13\symbian PLATFORM=GCCE LIB
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
+make   -r -f "\EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\SDL.GCCE" LIBRARY
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+make[1]: Nothing to be done for `LIBRARY'.
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
+make   -r -f "\EPOC32\BUILD\SDL-1.2.13\symbian\SDLEXE\GCCE\SDLEXE.GCCE" LIBRARY
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+make[1]: Nothing to be done for `LIBRARY'.
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
+make   -r -f "\EPOC32\BUILD\SDL-1.2.13\symbian\SDLMAIN\GCCE\SDLMAIN.GCCE" LIBRARY
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+make[1]: Nothing to be done for `LIBRARY'.
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
+make   -r -f "\EPOC32\BUILD\SDL-1.2.13\symbian\SDLMAINT\GCCE\SDLMAINT.GCCE" LIBRARY
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+make[1]: Nothing to be done for `LIBRARY'.
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
+  make -r  -f "\EPOC32\BUILD\SDL-1.2.13\symbian\GCCE.make" RESOURCE CFG=UREL
+make   -C \SDL-1.2.13\symbian -f "SDL_S60.MK" TO_ROOT=..\.. EPOCBLD=\EPOC32\BUILD\SDL_S60\GCCE TO_BLDINF=..\..\SDL-1.2.13\symbian PLATFORM=GCCE CFG=UREL RESOURCE
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+bmconv /h\epoc32\include\sdlexe.mbg \epoc32\data\z\Resource\apps\sdlexe.mbm \
+    	/c16data\pointer.bmp /8data\pointer-alpha.bmp /c16data\pointer-2.bmp
+
+
+BMCONV version 112.
+Compiling...
+Multiple bitmap store type: File store
+Epoc file: \epoc32\data\z\Resource\apps\sdlexe.mbm
+
+Bitmap file 1	: data\pointer.bmp
+Bitmap file 2	: data\pointer-alpha.bmp
+Bitmap file 3	: data\pointer-2.bmp
+Success.
+copy \epoc32\data\z\Resource\apps\sdlexe.mbm \epoc32\release\winscw\udeb\z\resource\apps\ /Y
+        1 file(s) copied.
+md \epoc32\include\SDL
+copy ..\include\*.* \epoc32\include\SDL  /Y
+..\include\begin_code.h
+..\include\close_code.h
+..\include\SDL.h
+..\include\SDL_active.h
+..\include\SDL_audio.h
+..\include\SDL_byteorder.h
+..\include\SDL_cdrom.h
+..\include\SDL_config.h
+..\include\SDL_config.h.default
+..\include\SDL_config.h.in
+..\include\SDL_config_dreamcast.h
+..\include\SDL_config_macos.h
+..\include\SDL_config_macosx.h
+..\include\SDL_config_minimal.h
+..\include\SDL_config_nds.h
+..\include\SDL_config_os2.h
+..\include\SDL_config_symbian.h
+..\include\SDL_config_win32.h
+..\include\SDL_copying.h
+..\include\SDL_cpuinfo.h
+..\include\SDL_endian.h
+..\include\SDL_error.h
+..\include\SDL_events.h
+..\include\SDL_getenv.h
+..\include\SDL_joystick.h
+..\include\SDL_keyboard.h
+..\include\SDL_keysym.h
+..\include\SDL_loadso.h
+..\include\SDL_main.h
+..\include\SDL_mouse.h
+..\include\SDL_mutex.h
+..\include\SDL_name.h
+..\include\SDL_opengl.h
+..\include\SDL_platform.h
+..\include\SDL_quit.h
+..\include\SDL_rwops.h
+..\include\SDL_stdinc.h
+..\include\SDL_syswm.h
+..\include\SDL_thread.h
+..\include\SDL_timer.h
+..\include\SDL_types.h
+..\include\SDL_version.h
+..\include\SDL_video.h
+       43 file(s) copied.
+copy .\inc\SDL_*.* \epoc32\include\SDL  /Y
+.\inc\SDL_config.h
+.\inc\SDL_config_symbian.h
+.\inc\SDL_gliop.h
+        3 file(s) copied.
+perl tools\gendefdata.pl include\internal\gles_armv5_def.txt include\internal\gles_armv5_def.h
+perl tools\gendefdata.pl include\internal\gles_winscw_def.txt include\internal\gles_wincw_def.h
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
+make   -r -f "\EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\SDL.GCCE" RESOURCEUREL
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+make[1]: Nothing to be done for `RESOURCEUREL'.
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
+make   -r -f "\EPOC32\BUILD\SDL-1.2.13\symbian\SDLEXE\GCCE\SDLEXE.GCCE" RESOURCEUREL
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+make[1]: Nothing to be done for `RESOURCEUREL'.
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
+make   -r -f "\EPOC32\BUILD\SDL-1.2.13\symbian\SDLMAIN\GCCE\SDLMAIN.GCCE" RESOURCEUREL
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+make[1]: Nothing to be done for `RESOURCEUREL'.
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
+make   -r -f "\EPOC32\BUILD\SDL-1.2.13\symbian\SDLMAINT\GCCE\SDLMAINT.GCCE" RESOURCEUREL
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+make[1]: Nothing to be done for `RESOURCEUREL'.
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
+  make -r  -f "\EPOC32\BUILD\SDL-1.2.13\symbian\GCCE.make" TARGET CFG=UREL
+make   -C \SDL-1.2.13\symbian -f "SDL_S60.MK" TO_ROOT=..\.. EPOCBLD=\EPOC32\BUILD\SDL_S60\GCCE TO_BLDINF=..\..\SDL-1.2.13\symbian PLATFORM=GCCE CFG=UREL BLD
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
+make   -r -f "\EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\SDL.GCCE" UREL
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+arm-none-symbianelf-ld      --target1-abs --no-undefined -nostdlib  -L"D:\Symbian\CSL Arm Toolchain\arm-none-symbianelf\lib" -L"D:\Symbian\CSL Arm Toolchain\lib\gcc\arm-none-symbianelf\3.4.3" -shared -Ttext 0x8000   -Tdata 0x400000 --default-symver -soname sdl{000a0000}[f01f3d69].dll   --entry _E32Dll  -u _E32Dll  \epoc32\release\ARMV5\urel\EDLL.LIB \
+	-o "\EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\sdl.dll" \
+	-Map  "\epoc32\release\gcce\urel\sdl.dll.map" \
+	\EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\vectorbuffer.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\sdlappsrv.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\sdlenv.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\dsa.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\streamplayer.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\sdlenvutils.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_error.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_fatal.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_libutils.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_main.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_cpuinfo.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_blit.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_blit_0.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_blit_1.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_blit_A.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_blit_N.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_bmp.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_cursor.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_gamma.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_pixels.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_RLEaccel.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_stretch.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_surface.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_video.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_yuv.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_yuv_mmx.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_yuv_sw.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_epocvideo.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_epocevents.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_audio.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_audiocvt.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_audiodev.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_mixer.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_wave.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_epocaudio.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\mixer.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\music.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\playwave.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\wavestream.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\effects_internal.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\effect_position.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\effect_stereoreverse.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\load_aiff.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\load_voc.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\load_ogg.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\music_ogg.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\dynamic_ogg.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_thread.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_syscond.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_sysmutex.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_syssem.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_systhread.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_active.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_events.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_keyboard.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_mouse.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_quit.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_resize.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_timer.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_systimer.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_rwops.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_string.o \EPOC32\BUILD\SDL-1.2.13\symbian\SDL\GCCE\urel\SDL_getenv.o \
+	\epoc32\release\ARMV5\urel\EDLLSTUB.lib \epoc32\release\ARMV5\urel\usrt2_2.lib \epoc32\release\ARMV5\urel\vorbis.lib \epoc32\release\ARMV5\urel\ogg.lib \epoc32\release\armv5\LIB\euser.dso \epoc32\release\armv5\LIB\fbscli.dso \epoc32\release\armv5\LIB\ws32.dso \epoc32\release\armv5\LIB\gdi.dso \epoc32\release\armv5\LIB\mediaclientaudiostream.dso \epoc32\release\armv5\LIB\avkon.dso \epoc32\release\armv5\LIB\efsrv.dso \epoc32\release\armv5\LIB\bafl.dso \epoc32\release\armv5\LIB\apparc.dso \epoc32\release\armv5\LIB\eikcore.dso \epoc32\release\armv5\LIB\cone.dso \epoc32\release\armv5\LIB\bitgdi.dso \epoc32\release\armv5\LIB\scdv.dso \epoc32\release\armv5\LIB\hal.dso \epoc32\release\armv5\LIB\libc.dso \epoc32\release\armv5\LIB\libm.dso \epoc32\release\armv5\LIB\dfpaeabi.dso \epoc32\release\armv5\LIB\dfprvct2_2.dso \epoc32\release\armv5\LIB\drtaeabi.dso \epoc32\release\armv5\LIB\scppnwdl.dso \epoc32\release\armv5\LIB\drtrvct2_2.dso -lsupc++ -lgcc \
+	  
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
+  make -r  -f "\EPOC32\BUILD\SDL-1.2.13\symbian\GCCE.make" FINAL CFG=UREL
+make   -C \SDL-1.2.13\symbian -f "SDL_S60.MK" TO_ROOT=..\.. EPOCBLD=\EPOC32\BUILD\SDL_S60\GCCE TO_BLDINF=..\..\SDL-1.2.13\symbian PLATFORM=GCCE CFG=UREL FINAL
+make[1]: Entering directory `I:/SDL-1.2.13/symbian'
+make[1]: Leaving directory `I:/SDL-1.2.13/symbian'
