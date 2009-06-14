@@ -1,0 +1,2 @@
+
+SConscript("SConscript.Symbian.py")
