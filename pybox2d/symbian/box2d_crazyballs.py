@@ -30,7 +30,7 @@ def check_exit_event( event ):
     return None
 
 class PhysicsWorld:
-    targetFPS = 40
+    targetFPS = 9999 # Run Forrest! Run!
     timeStep  = 1000 / targetFPS
     iterations = 5
     bodies = []
@@ -110,25 +110,29 @@ def main():
 
     screen = pygame.display.set_mode(size)
     clock  = pygame.time.Clock()
-    tics   = pygame.time.get_ticks()
+    
     colors = [ 0xFF0000, 0x00FF00, 0xFF00FF, 0x00FF00, 0xFFFF00, 0x00FFFF ]
-
+    font   = pygame.font.get_default_font()
+    font   = pygame.font.Font( font, 10)
+    font_color = (0,255,0)
+    fps_pos    = ( 2, 2 )
+    
+    world.world.SetWarmStarting(True)
+    world.world.SetContinuousPhysics(True)
+    timeStep = 2. / 60.
+    
+    velocityIterations = 10
+    positionIterations = 8
+        
     from pygame import draw
     while 1:
 
-        clock.tick(30)
         for event in pygame.event.get():
             check_exit_event( event )
 
         # Clear screen
         screen.fill(BLACK)
-
-        velocityIterations = 10
-        positionIterations = 8
-
-        timeStep = 2. / 60.
-        world.world.SetWarmStarting(True)
-    	world.world.SetContinuousPhysics(True)
+        
         world.world.Step(timeStep, 10, positionIterations)
         world.world.Validate()
 
@@ -139,15 +143,15 @@ def main():
             draw.circle( screen, colors[ i % len(colors)], ((x)*10, (y) * 10), r * 10, 0 )
             i += 1
 
+        # Draw fps
+        fps = clock.get_fps()
+        fps = "%d FPS" % fps
+        fps = font.render( fps, False, font_color)
+        screen.blit( fps, fps_pos )
         pygame.display.flip()
-        clock.tick(30)
 
-        tics = pygame.time.get_ticks()
-
-
-    #for x in xrange(100):
-        #print ballShape.body.p.x, ballShape.body.p.y
-
+        clock.tick(PhysicsWorld.targetFPS) 
+        
 
 if __name__ == '__main__':
     try:
