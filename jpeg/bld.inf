@@ -1,0 +1,11 @@
+PRJ_EXPORTS
+
+jpeglib.h
+jconfig.h
+jmorecfg.h
+jerror.h
+
+PRJ_MMPFILES
+
+libjpeg.mmp
+
