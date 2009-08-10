@@ -293,6 +293,7 @@ def main():
         for file in files:
             os.remove(file)
         os.remove(TARGET)
+        return
         
     if not os.path.exists( TARGET ):
         os.mkdir(TARGET)
