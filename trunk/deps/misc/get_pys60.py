@@ -86,6 +86,8 @@ def install(options):
         elif name.endswith(".tar.gz") and latest in name:
             tfile = tarfile.open(archive, 'r:gz')
             infolist = tfile.getmembers()
+            
+            
         else:
             print name, "skipped."
             continue
@@ -127,10 +129,14 @@ def install(options):
                 name = info.filename
                         
             path = os.environ["EPOCROOT"] + name
+            
+            if "PythonForS60" in archive and options.tools_path:
+                path = os.path.join( options.tools_path, name )
+                
             if name.endswith("/"):
                 if not os.path.exists(path):
                     os.mkdir(path)
-                    print "Dir created:", path
+                    #print "Dir created:", path
                 
                 continue
             
@@ -255,6 +261,9 @@ def main():
     parser.add_option("-t", "--target-dir",
                   dest="target_dir", default=TARGET,
                   help="Folder where the files are downloaded:[%default]")
+    
+    parser.add_option("", "--tools-path", default=None,
+                  help="Folder where the PythonForS60 tools are installed:[%default]")
     
     parser.add_option("-f", "--force-download",
                       action="store_true", dest="force_download", default=False,
