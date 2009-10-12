@@ -122,8 +122,10 @@ def install(options):
                 
             
             if type(info) == tarfile.TarInfo:
+                #import pdb;pdb.set_trace()
                 name = info.name
                 file = tfile.extractfile(info)
+                
             else:
                 file = zfile
                 name = info.filename
@@ -133,11 +135,10 @@ def install(options):
             if "PythonForS60" in archive and options.tools_path:
                 path = os.path.join( options.tools_path, name )
                 
-            if name.endswith("/"):
+            if name.endswith("/") or file is None:
                 if not os.path.exists(path):
                     os.mkdir(path)
                     #print "Dir created:", path
-                
                 continue
             
             #print path
